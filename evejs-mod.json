@@ -1,0 +1,47 @@
+{
+  "author": {
+    "id": "au-muwl3cbjkr4n",
+    "keyId": "90d34319723f",
+    "name": "JonnyTC"
+  },
+  "category": "修复",
+  "changelog": "",
+  "conflicts": [],
+  "delisted": false,
+  "description": "修亚光速穿过建筑。挂 destinyMovementEngine 的 advanceEntityForActiveSceneTick：prev→线段 vs 静态球扫掠，命中则钳到表面并广播 SetBallPosition/SetBallVelocity。v1.31 位置回推每帧 35%、压速每帧 ×0.8；v1.32 白名单补 orbital；v1.33 按类型缩半径（orbital 0.35）；v1.34 接触日志；v1.35 tick 日志；v1.36 低速落定；v1.39 撤销预测制动；v1.40 深穿透一次推回；v1.41 速度指向离开表面时完全放行（修复掉头瞬间调转船头）。半径按胶囊（正撞 1.0 / 侧撞 0.35），一次接触内锁定夹角。只管玩家船；跳过矿石；跃迁不拦。开关：_SHIP_COLLISION=0 / _KINDS / _SKIP_CAT / _DEADBAND / _EASE / _HIT_DECAY。",
+  "displayName": "舰船静态物碰撞修复 (Ship Collision Fix)",
+  "downloadUrls": [
+    {
+      "mirror": "github",
+      "priority": 1,
+      "url": "https://github.com/JonnyTC/evejs-mod-evejs-ship-collision-fix/releases/download/v1.41.0/evejs-ship-collision-fix-1.41.0.zip"
+    }
+  ],
+  "evejsVersions": [
+    "0.12.9",
+    "261018.x"
+  ],
+  "featured": false,
+  "highlights": [],
+  "history": [],
+  "id": "evejs-ship-collision-fix",
+  "publishedAt": "2026-11-03",
+  "readme": [
+    "修「亚光速飞行时路径穿过建筑模型，船直接穿过去，不减速、不停、不弹」。",
+    "---"
+  ],
+  "repo": "https://github.com/JonnyTC/evejs-mod-evejs-ship-collision-fix",
+  "requiresRestart": true,
+  "sha256": "7471ffa74311af0fe4865ec036922df2a91a4b66cd40f02cab0f9a20ce8e4eba",
+  "sizeBytes": 33516,
+  "tags": [
+    "碰撞",
+    "穿模",
+    "建筑",
+    "飞行",
+    "回弹",
+    "movement",
+    "修复"
+  ],
+  "version": "1.41.0"
+}
